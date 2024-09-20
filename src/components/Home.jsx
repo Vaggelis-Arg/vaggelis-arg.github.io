@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Grid, Typography, Box, Avatar } from '@mui/material';
+import { Container, Grid, Typography, Box, Avatar, useMediaQuery } from '@mui/material';
 import profilePicture from '../assets/profile-image.jpg';
 
 const Home = () => {
+    const isSmallScreen = useMediaQuery('(max-width:600px)');
     return (
         <section
         id="home"
@@ -15,7 +16,6 @@ const Home = () => {
             overflow: 'hidden',
             minHeight: '100vh',
             padding: '2rem',
-            marginTop: '-5vh',
             zIndex: 1,
         }}
         >
@@ -27,7 +27,7 @@ const Home = () => {
                     alt="Evangelos Argyropoulos"
                     sx={{
                         width: '100%',
-                        maxWidth: '250px',
+                        maxWidth: isSmallScreen ? '235px' : '250px',
                         height: 'auto',
                         display: 'block',
                     }}
@@ -41,7 +41,7 @@ const Home = () => {
                             gutterBottom
                             sx={{
                             color: '#6e6658',
-                            fontSize: '3rem',
+                            fontSize: isSmallScreen ? '2.5rem' : '3rem',
                             fontFamily: 'Poppins, sans-serif',
                             }}
                         >
