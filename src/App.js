@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import ParticlesBackground from './components/ParticlesBackground';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -13,7 +14,11 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={
+          <>
+            <ParticlesBackground />
+            <Home />
+          </>} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
