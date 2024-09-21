@@ -50,7 +50,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: isSmallScreen ? '67px' : '80px',
+                        height: isSmallScreen ? '67px' : '90px',
                         marginBottom: '0.3rem',
                     }}
                 />
@@ -118,7 +118,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: isSmallScreen ? '67px' : '80px',
+                        height: isSmallScreen ? '67px' : '90px',
                         marginBottom: '0.3rem',
                     }}
                 />
