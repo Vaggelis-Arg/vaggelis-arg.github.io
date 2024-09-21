@@ -36,7 +36,14 @@ const Projects = () => {
                 variant="h4"
                 align="center"
                 gutterBottom
-                sx={{ marginBottom: '60px', marginTop: '70px', fontFamily: 'Poppins, sans-serif' }}
+                sx={{
+                    marginBottom: '40px',
+                    marginTop: '70px',
+                    fontFamily: 'Poppins, sans-serif',
+                    color: '#6e6658',
+                    fontSize: '2rem',
+                    letterSpacing: '0.1em',
+                }}
             >
                 Projects
             </Typography>
@@ -50,7 +57,7 @@ const Projects = () => {
                     flexDirection: isSmallScreen ? 'column' : 'row',
                     flexWrap: 'wrap',
                     '& > *': {
-                        flexBasis: isSmallScreen ? '100%' : '40%',
+                        flexBasis: isSmallScreen ? '100%' : '37%',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
@@ -68,7 +75,7 @@ const Projects = () => {
                     }}
                 >
                     <CardContent>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                             BeConnected
                         </Typography>
                         <Typography
@@ -119,7 +126,7 @@ const Projects = () => {
                     }}
                 >
                     <CardContent>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                             C-data-structures
                         </Typography>
                         <Typography

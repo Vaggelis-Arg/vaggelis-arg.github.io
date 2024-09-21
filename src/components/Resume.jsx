@@ -27,9 +27,16 @@ const Resume = () => {
             variant="h4"
             align="center"
             gutterBottom
-            sx={{ marginBottom: '60px' ,marginTop: '70px', fontFamily: 'Poppins, sans-serif' }}
+            sx={{
+                marginBottom: '40px',
+                marginTop: '70px',
+                fontFamily: 'Poppins, sans-serif',
+                color: '#6e6658',
+                fontSize: '2rem',
+                letterSpacing: '0.1em',
+            }}
         >
-            My Resume
+            Resume
         </Typography>
         
         <VerticalTimeline lineColor='#6e6658'>
