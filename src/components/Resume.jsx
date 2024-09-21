@@ -1,16 +1,18 @@
 import React from 'react';
 import {
-  VerticalTimeline,
-  VerticalTimelineElement
+    VerticalTimeline,
+    VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
-import { Typography } from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 import nkuaLogo from '../assets/nkua-logo.png';
 import othisiLogo from '../assets/othisi-school.png';
 
 const Resume = () => {
+    const isSmallScreen = useMediaQuery('(max-width:550px)');
+
     return (
         <section
         id="resume"
@@ -39,7 +41,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<WorkIcon />}
             >
-                <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     Teaching Assistant
                 </Typography>
                 <img
@@ -48,7 +50,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: '85px',
+                        height: isSmallScreen ? '70px' : '90px',
                         marginBottom: '0.3rem',
                     }}
                 />
@@ -73,7 +75,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658'  }}
             icon={<WorkIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     Student Supervisor
                 </Typography>
                 <img
@@ -82,7 +84,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: '130px',
+                        height: isSmallScreen ? '100px' : '130px',
                         marginBottom: '0.3rem',
                     }}
                 />
@@ -107,7 +109,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     B.Sc. Computer Science
                 </Typography>
                 <img
@@ -116,7 +118,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: '85px',
+                        height: isSmallScreen ? '70px' : '90px',
                         marginBottom: '0.3rem',
                     }}
                 />
@@ -142,7 +144,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     High School
                 </Typography>
                 <img
@@ -151,7 +153,7 @@ const Resume = () => {
                     style={{
                         marginTop: '1rem',
                         float: 'left',
-                        height: '130px',
+                        height: isSmallScreen ? '100px' : '130px',
                         marginBottom: '0.3rem',
                     }}
                 />
@@ -177,7 +179,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     English C2
                 </Typography>
                 <Typography 
