@@ -11,23 +11,23 @@ import About from './components/About';
 import './style.css';
 
 function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-      <Route path="/" element={
-          <>
-            <ParticlesBackground />
-            <Home />
-            <About />
-          </>} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    return (
+        <Router>
+        <Navbar />
+        <Routes>
+        <Route path="/" element={
+            <>
+                <ParticlesBackground />
+                <Home />
+                <About />
+            </>} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+        </Router>
+    );
 }
 
 export default App;

@@ -42,7 +42,12 @@ const Resume = () => {
         <VerticalTimeline lineColor='#6e6658'>
             <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "#d8c3a5", color: "#6e6658" }}
+            contentStyle={{
+                background: "#d8c3a5",
+                color: "#6e6658",
+                borderRadius: '15px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            }}
             contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
             date="2023-2024"
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
@@ -76,7 +81,12 @@ const Resume = () => {
 
             <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "#d8c3a5", color: "#6e6658" }}
+            contentStyle={{
+                background: "#d8c3a5",
+                color: "#6e6658",
+                borderRadius: '15px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            }}
             contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
             date="2022 - 2023"
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658'  }}
@@ -110,7 +120,12 @@ const Resume = () => {
 
             <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#d8c3a5", color: "#6e6658" }}
+            contentStyle={{
+                background: "#d8c3a5",
+                color: "#6e6658",
+                borderRadius: '15px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            }}
             contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
             date="2022 - Present"
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
@@ -145,7 +160,12 @@ const Resume = () => {
 
             <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#d8c3a5", color: "#6e6658" }}
+            contentStyle={{
+                background: "#d8c3a5",
+                color: "#6e6658",
+                borderRadius: '15px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            }}
             contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
             date="2019 - 2022"
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
@@ -180,7 +200,12 @@ const Resume = () => {
 
             <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#d8c3a5", color: "#6e6658" }}
+            contentStyle={{
+                background: "#d8c3a5",
+                color: "#6e6658",
+                borderRadius: '15px',
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            }}
             contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
             date="2019"
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}

@@ -16,7 +16,8 @@ const ParticlesBackground = () => {
         interactivity: {
             events: {
                 onClick: {
-                    enable: false,
+                    enable: true,
+                    mode: "push",
                 },
                 onHover: {
                     enable: true,
@@ -25,6 +26,9 @@ const ParticlesBackground = () => {
                 resize: true,
             },
             modes: {
+                push: {
+                    quantity: 2,
+                },
                 repulse: {
                     distance: 200,
                     duration: 0.4,
