@@ -1,11 +1,58 @@
-import React from 'react';
-import { Typography, Grid, IconButton, Box } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Typography, Grid, IconButton, Box, TextField, Button, Snackbar, Alert } from '@mui/material';
 import { LinkedIn, GitHub, Email } from '@mui/icons-material';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+
+    useEffect(() => {
+        emailjs.init("P8658nhejvoCtU-4V");
+    }, []);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const templateParams = {
+            user_name: formData.name,
+            user_email: formData.email,
+            message: formData.message,
+        };
+
+        emailjs.send('service_ajegvq6', 'template_3sps9hl', templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setFormData({ name: '', email: '', message: '' });
+                setSnackbarMessage('Message sent successfully!');
+                setSnackbarSeverity('success');
+                setSnackbarOpen(true);
+            }, (error) => {
+                console.log('FAILED...', error);
+                setSnackbarMessage('Failed to send message. Please try again.');
+                setSnackbarSeverity('error');
+                setSnackbarOpen(true);
+            });
+    };
+
+    const handleSnackbarClose = () => {
+        setSnackbarOpen(false);
+    };
+
     return (
         <section
-            id="projects"
+            id="contact"
             style={{
                 backgroundColor: '#eae7dc',
                 minHeight: '100vh',
@@ -24,14 +71,13 @@ const Contact = () => {
                 sx={{
                     marginBottom: '40px',
                     marginTop: '70px',
-                    fontFamily: 'Poppins, sans-serif',
                     color: '#6e6658',
                     fontSize: '3rem',
                     fontWeight: 'bold',
                     letterSpacing: '0.1em',
                 }}
             >
-                Let's Connect!
+                Get in Touch
             </Typography>
 
             <Box
@@ -39,11 +85,8 @@ const Contact = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    width: '100%',
-                    borderTop: '2px solid #6e6658',
-                    paddingTop: '20px',
-                    paddingBottom: '20px',
-                    marginBottom: '60px',
+                    width: '100vw',
+                    marginBottom: '40px',
                 }}
             >
                 <Grid container justifyContent="center" spacing={4}>
@@ -54,14 +97,16 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
+                            disableRipple
                             sx={{
-                                '&:hover': {
-                                    transform: 'scale(1.2)',
-                                    transition: 'transform 0.3s ease-in-out',
+                                '&:hover svg': {
+                                    color: '#0077b5',
+                                    transform: 'translateY(-5px)',
+                                    transition: '0.3s ease-in-out',
                                 },
                             }}
                         >
-                            <LinkedIn sx={{ color: '#6e6658', fontSize: 60 }} />
+                            <LinkedIn sx={{ fontSize: 50, color: '#6e6658' }} />
                         </IconButton>
                     </Grid>
                     <Grid item>
@@ -71,14 +116,16 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="GitHub"
+                            disableRipple
                             sx={{
-                                '&:hover': {
-                                    transform: 'scale(1.2)',
-                                    transition: 'transform 0.3s ease-in-out',
+                                '&:hover svg': {
+                                    color: '#171515',
+                                    transform: 'translateY(-5px)',
+                                    transition: '0.3s ease-in-out',
                                 },
                             }}
                         >
-                            <GitHub sx={{ color: '#6e6658', fontSize: 60 }} />
+                            <GitHub sx={{ fontSize: 50, color: '#6e6658' }} />
                         </IconButton>
                     </Grid>
                     <Grid item>
@@ -86,30 +133,147 @@ const Contact = () => {
                             component="a"
                             href="mailto:vag.argyropoulos@gmail.com"
                             aria-label="Email"
+                            disableRipple
                             sx={{
-                                '&:hover': {
-                                    transform: 'scale(1.2)',
-                                    transition: 'transform 0.3s ease-in-out',
+                                '&:hover svg': {
+                                    color: '#d14836',
+                                    transform: 'translateY(-5px)',
+                                    transition: '0.3s ease-in-out',
                                 },
                             }}
                         >
-                            <Email sx={{ color: '#6e6658', fontSize: 60 }} />
+                            <Email sx={{ fontSize: 50, color: '#6e6658' }} />
                         </IconButton>
                     </Grid>
                 </Grid>
             </Box>
-            <Typography
-                variant="body1"
-                align="center"
+
+            <Box
+                component="form"
+                onSubmit={handleSubmit}
                 sx={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.2rem',
-                    color: '#6e6658',
-                    letterSpacing: '0.05em',
+                    width: '100%',
+                    maxWidth: '600px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    backgroundColor: '#d8c3a5',
+                    borderRadius: '15px',
+                    padding: '30px',
+                    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
                 }}
             >
-                Feel free to reach out for collaborations or just a friendly hello!
-            </Typography>
+                <TextField
+                    name="name"
+                    label="Your Name"
+                    variant="outlined"
+                    onChange={handleChange}
+                    value={formData.name}
+                    fullWidth
+                    sx={{
+                        marginBottom: '20px',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                        },
+                        '& label': {
+                            color: '#6e6658',
+                        },
+                    }}
+                    InputLabelProps={{ style: { color: '#6e6658' } }}
+                    required
+                />
+                <TextField
+                    name="email"
+                    label="Your Email"
+                    variant="outlined"
+                    onChange={handleChange}
+                    value={formData.email}
+                    fullWidth
+                    sx={{
+                        marginBottom: '20px',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                        },
+                        '& label': {
+                            color: '#6e6658',
+                        },
+                    }}
+                    InputLabelProps={{ style: { color: '#6e6658' } }}
+                    required
+                />
+                <TextField
+                    name="message"
+                    label="Your Message"
+                    variant="outlined"
+                    multiline
+                    rows={4}
+                    onChange={handleChange}
+                    value={formData.message}
+                    fullWidth
+                    sx={{
+                        marginBottom: '20px',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: '#6e6658',
+                            },
+                        },
+                        '& label': {
+                            color: '#6e6658',
+                        },
+                    }}
+                    InputLabelProps={{ style: { color: '#6e6658' } }}
+                    required
+                />
+                <Button
+                    type="submit"
+                    variant="contained"
+                    fullWidth
+                    sx={{
+                        backgroundColor: '#6e6658',
+                        color: '#eae7dc',
+                        fontWeight: 'bold',
+                        '&:hover': {
+                            backgroundColor: '#8a7f70',
+                        },
+                        padding: '10px',
+                        fontSize: '1.1rem',
+                    }}
+                >
+                    Send Message
+                </Button>
+            </Box>
+
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={6000}
+                onClose={handleSnackbarClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            >
+                <Alert onClose={handleSnackbarClose} severity={snackbarSeverity} sx={{ width: '100%' }}>
+                    {snackbarMessage}
+                </Alert>
+            </Snackbar>
         </section>
     );
 };

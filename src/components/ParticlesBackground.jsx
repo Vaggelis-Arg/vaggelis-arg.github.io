@@ -20,7 +20,7 @@ const ParticlesBackground = () => {
                     mode: "push",
                 },
                 onHover: {
-                    enable: true,
+                    enable: false,
                     mode: "repulse",
                 },
                 resize: true,
@@ -55,16 +55,16 @@ const ParticlesBackground = () => {
                 outModes: {
                     default: "bounce",
                 },
-                random: false,
+                random: true,
                 speed: 2,
                 straight: false,
             },
             number: {
                 density: {
                 enable: true,
-                    area: 850,
+                    area: 700,
                 },
-                value: 40,
+                value: 60,
             },
             opacity: {
                 value: 0.5,

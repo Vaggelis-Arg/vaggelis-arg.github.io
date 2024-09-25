@@ -67,7 +67,7 @@ const Projects = () => {
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
-                    gap: '20px',
+                    gap: '30px',
                     alignItems: 'stretch',
                     flexDirection: isSmallScreen ? 'column' : 'row',
                     flexWrap: 'wrap',
@@ -87,62 +87,68 @@ const Projects = () => {
                         padding: '20px',
                         textAlign: 'center',
                         borderRadius: 0,
+                        '&:hover': {
+                                    transform: 'scale(1.01)',
+                                    transition: 'transform 0.3s ease-in-out',
+                                },
                     }}
                 >
-                    <CardContent>
-                    <Typography
-                        variant="h4"
-                        noWrap
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            color: '#0a66c2',
-                            textDecoration: 'none',
-                            fontSize: isSmallScreen ?  '2.5rem' : {xs: '1.2rem', md: '2.5rem'},
-                            lineHeight: '1.2',
-                        }}
-                    >
-                        Be
-                        <Box
+                    <a href="https://github.com/Vaggelis-Arg/beconnected" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <CardContent>
+                        <Typography
+                            variant="h4"
+                            noWrap
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                borderRadius: '20%',
-                                bgcolor: '#0a66c2',
-                                width: '3.5rem',
-                                height: '3.5rem',
-                                mr: 0.5,
-                                ml: 0.5,
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                color: '#0a66c2',
+                                textDecoration: 'none',
+                                fontSize: isSmallScreen ?  '2.5rem' : {xs: '1.2rem', md: '2.5rem'},
+                                lineHeight: '1.2',
                             }}
                         >
-                            <LinkIcon
+                            Be
+                            <Box
                                 sx={{
-                                    fontSize: {md: '2.75rem'},
-                                    color: '#d8c3a5',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    borderRadius: '20%',
+                                    bgcolor: '#0a66c2',
+                                    width: '3.5rem',
+                                    height: '3.5rem',
+                                    mr: 0.5,
+                                    ml: 0.5,
                                 }}
-                            />
-                        </Box>
-                        Connected
-                    </Typography>
-                        <Typography
-                            paragraph
-                            sx={{
-                                color: '#6e6658',
-                                fontFamily: 'Poppins, sans-serif',
-                                marginTop: '1.5rem',
-                            }}
-                        >
-                            BeConnected is a professional networking app, similar to LinkedIn, that my classmate and I developed as part
-                            of the Internet Technologies and Applications course at the National and Kapodistrian University of Athens.
-                            The app features two roles: Administrators, who manage users and export data, and Professionals, who manage
-                            their profiles, connections, and content. BeConnected is built on a client-server model, utilizing Spring Boot
-                            and MySQL for the server side and React with JavaScript for the client side.
+                            >
+                                <LinkIcon
+                                    sx={{
+                                        fontSize: {md: '2.75rem'},
+                                        color: '#d8c3a5',
+                                    }}
+                                />
+                            </Box>
+                            Connected
                         </Typography>
-                    </CardContent>
+                            <Typography
+                                paragraph
+                                sx={{
+                                    color: '#6e6658',
+                                    fontFamily: 'Poppins, sans-serif',
+                                    marginTop: '1.5rem',
+                                }}
+                            >
+                                BeConnected is a professional networking app, similar to LinkedIn, that my classmate and I developed as part
+                                of the Internet Technologies and Applications course at the National and Kapodistrian University of Athens.
+                                The app features two roles: Administrators, who manage users and export data, and Professionals, who manage
+                                their profiles, connections, and content. BeConnected is built on a client-server model, utilizing Spring Boot
+                                and MySQL for the server side and React with JavaScript for the client side.
+                            </Typography>
+                        </CardContent>
+                    </a>
                     <>
                     <ImageList
                     sx={{
@@ -222,84 +228,90 @@ const Projects = () => {
                         padding: '20px',
                         textAlign: 'center',
                         borderRadius: 0,
+                        '&:hover': {
+                                    transform: 'scale(1.01)',
+                                    transition: 'transform 0.3s ease-in-out',
+                                },
                     }}
                 >
-                    <CardContent>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                mb: 2,
-                            }}
-                        >
-                            <DataObjectIcon
+                    <a href="https://github.com/Vaggelis-Arg/C-data-structures" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <CardContent>
+                            <Box
                                 sx={{
-                                    fontSize: { md: '3.2rem' },
-                                    color: '#4a4a44',
-                                    mr: 1,
-                                }}
-                            />
-                            <Typography
-                                variant="h5"
-                                component="div"
-                                sx={{
-                                    fontSize: { md: '2.2rem' },
-                                    fontWeight: 700,
-                                    fontFamily: 'monospace',
-                                    color: '#4a4a44',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    mb: 2,
                                 }}
                             >
-                                C-data-structures
-                            </Typography>
-                        </Box>
-
-                        <Typography
-                            paragraph
-                            sx={{
-                                color: '#6e6658',
-                                fontFamily: 'Poppins, sans-serif',
-                                marginTop: '2.5rem',
-                            }}
-                        >
-                            A collection of various data structures implemented in C using void pointers and macros.
-                            Each data structure in this project is designed to provide efficient and flexible solutions to common
-                            programming challenges. The use of void pointers and macros allows for a generic implementation that can
-                            handle different types of data.
-                        </Typography>
-                        <Typography
-                            paragraph
-                            sx={{
-                                color: '#6e6658',
-                                fontFamily: 'Poppins, sans-serif',
-                                marginTop: '1rem',
-                            }}
-                        >
-                            The project includes the following data structures:
-                        </Typography>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '8px',
-                                marginTop: '1rem',
-                            }}
-                        >
-                            {['AVL tree', 'Bloom Filter', 'Double Hashing Hash Table', 'Double Linked List', 'Priority Queue', 'Queue', 'Red Black Tree', 'Separate Chaining Hash Table', 'Skip List', 'Stack', 'Vector'].map((item) => (
-                                <Box
-                                    key={item}
+                                <DataObjectIcon
                                     sx={{
-                                        color: '#6e6658',
-                                        fontFamily: 'Poppins, sans-serif',
-                                        textAlign: 'center',
-                                        boxShadow: 'none',
+                                        fontSize: { md: '3.2rem' },
+                                        color: '#4a4a44',
+                                        mr: 1,
+                                    }}
+                                />
+                                <Typography
+                                    variant="h5"
+                                    component="div"
+                                    sx={{
+                                        fontSize: { md: '2.2rem' },
+                                        fontWeight: 700,
+                                        fontFamily: 'monospace',
+                                        color: '#4a4a44',
                                     }}
                                 >
-                                    {item}
-                                </Box>
-                            ))}
-                        </Box>
-                    </CardContent>
+                                    C-data-structures
+                                </Typography>
+                            </Box>
+
+                            <Typography
+                                paragraph
+                                sx={{
+                                    color: '#6e6658',
+                                    fontFamily: 'Poppins, sans-serif',
+                                    marginTop: '2.5rem',
+                                }}
+                            >
+                                A collection of various data structures implemented in C using void pointers and macros.
+                                Each data structure in this project is designed to provide efficient and flexible solutions to common
+                                programming challenges. The use of void pointers and macros allows for a generic implementation that can
+                                handle different types of data.
+                            </Typography>
+                            <Typography
+                                paragraph
+                                sx={{
+                                    color: '#6e6658',
+                                    fontFamily: 'Poppins, sans-serif',
+                                    marginTop: '1rem',
+                                }}
+                            >
+                                The project includes the following data structures:
+                            </Typography>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '8px',
+                                    marginTop: '1rem',
+                                }}
+                            >
+                                {['AVL tree', 'Bloom Filter', 'Double Hashing Hash Table', 'Double Linked List', 'Priority Queue', 'Queue', 'Red Black Tree', 'Separate Chaining Hash Table', 'Skip List', 'Stack', 'Vector'].map((item) => (
+                                    <Box
+                                        key={item}
+                                        sx={{
+                                            color: '#6e6658',
+                                            fontFamily: 'Poppins, sans-serif',
+                                            textAlign: 'center',
+                                            boxShadow: 'none',
+                                        }}
+                                    >
+                                        {item}
+                                    </Box>
+                                ))}
+                            </Box>
+                        </CardContent>
+                    </a>
                 </Card>
             </Box>
         </section>
