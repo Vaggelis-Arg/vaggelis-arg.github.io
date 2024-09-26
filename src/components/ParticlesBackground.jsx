@@ -61,10 +61,10 @@ const ParticlesBackground = () => {
             },
             number: {
                 density: {
-                enable: true,
+                    enable: true,
                     area: 700,
                 },
-                value: 60,
+                value: 55,
             },
             opacity: {
                 value: 0.5,
@@ -78,7 +78,14 @@ const ParticlesBackground = () => {
         },
     };
 
-    return <Particles id="tsparticles" init={particlesInit} options={particlesOptions}/>;
+    const particlesStyle = {
+        position: 'sticky',
+    };
+    return (
+        <div style={particlesStyle}>
+            <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+        </div>
+    );
 };
 
 export default ParticlesBackground;

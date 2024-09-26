@@ -1,9 +1,7 @@
 import React from 'react';
-import { Container, Typography, Box, useMediaQuery } from '@mui/material';
+import { Container, Typography, Box } from '@mui/material';
 
 const About = () => {
-    const isSmallScreen = useMediaQuery(`(max-width: ${2 * 330 + 64}px)`); // 330px minWidth * 2 boxes + 64px gap
-
     return (
         <section
         id="about"
@@ -28,15 +26,15 @@ const About = () => {
             <Box
             display="flex"
             justifyContent="center"
-            alignItems="stretch"
+            alignItems={{ xs: 'center', md: 'stretch' }}
             sx={{
                 gap: '4rem',
-                flexDirection: isSmallScreen ? 'column' : 'row',
+                flexDirection: { xs: 'column', md: 'row' },
             }}
             >
             <Box
                 sx={{
-                width: { xs: '100%', md: '35%' },
+                width: { xs: '90%', md: '35%' },
                 minWidth: '330px',
                 backgroundColor: '#d8c3a5',
                 padding: '1.5rem',
@@ -79,7 +77,7 @@ const About = () => {
 
             <Box
                 sx={{
-                width: { xs: '100%', md: '55%' },
+                width: { xs: '90%', md: '55%' },
                 minWidth: '330px',
                 backgroundColor: '#d8c3a5',
                 padding: '2rem',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Grid, IconButton, Box, TextField, Button, Snackbar, Alert } from '@mui/material';
+import { Typography, Grid, IconButton, Box, TextField, Button, Snackbar, Alert, CircularProgress } from '@mui/material';
 import { LinkedIn, GitHub, Email } from '@mui/icons-material';
 import emailjs from 'emailjs-com';
 
@@ -13,6 +13,7 @@ const Contact = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         emailjs.init("P8658nhejvoCtU-4V");
@@ -24,6 +25,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         const templateParams = {
             user_name: formData.name,
@@ -43,6 +45,9 @@ const Contact = () => {
                 setSnackbarMessage('Failed to send message. Please try again.');
                 setSnackbarSeverity('error');
                 setSnackbarOpen(true);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     };
 
@@ -80,6 +85,29 @@ const Contact = () => {
                 Get in Touch
             </Typography>
 
+            <Box
+                sx={{
+                    width: '100%',
+                    height: '2px',
+                    backgroundColor: '#6e6658',
+                    marginBottom: '40px',
+                }}
+            />
+
+            <Typography
+                variant="h5"
+                align="center"
+                gutterBottom
+                sx={{
+                    color: '#6e6658',
+                    marginBottom: '20px',
+                    fontSize: '2rem',
+                    fontWeight: 'bold',
+                    fontStyle: 'italic',
+                }}
+            >
+                Connect with me
+            </Typography>
             <Box
                 sx={{
                     display: 'flex',
@@ -148,6 +176,18 @@ const Contact = () => {
                 </Grid>
             </Box>
 
+            <Typography
+                variant="h6"
+                align="center"
+                sx={{
+                    color: '#6e6658',
+                    fontSize: '1.5rem',
+                    marginBottom: '20px',
+                    fontStyle: 'italic',
+                }}
+            >
+                Or, send me a message
+            </Typography>
             <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -260,15 +300,18 @@ const Contact = () => {
                         fontSize: '1.1rem',
                     }}
                 >
+                    {loading ? (
+                        <CircularProgress size={24} sx={{ color: '#eae7dc', marginRight: '10px' }} />
+                    ) : null}
                     Send Message
                 </Button>
             </Box>
 
             <Snackbar
                 open={snackbarOpen}
-                autoHideDuration={6000}
+                autoHideDuration={4000}
                 onClose={handleSnackbarClose}
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
             >
                 <Alert onClose={handleSnackbarClose} severity={snackbarSeverity} sx={{ width: '100%' }}>
                     {snackbarMessage}
