@@ -27,7 +27,7 @@ const Home = () => {
                     alt="Evangelos Argyropoulos"
                     sx={{
                         width: '100%',
-                        maxWidth: isSmallScreen ? '235px' : '250px',
+                        maxWidth: isSmallScreen ? '225px' : '250px',
                         height: 'auto',
                         display: 'block',
                     }}
@@ -41,7 +41,7 @@ const Home = () => {
                             gutterBottom
                             sx={{
                             color: '#6e6658',
-                            fontSize: isSmallScreen ? '2.5rem' : '3rem',
+                            fontSize: isSmallScreen ? '2.15rem' : '3rem',
                             fontFamily: 'Poppins, sans-serif',
                             }}
                         >

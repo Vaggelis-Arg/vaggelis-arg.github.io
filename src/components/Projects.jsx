@@ -12,7 +12,7 @@ import LinkIcon from '@mui/icons-material/Link';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 
 const Projects = () => {
-    const isSmallScreen = useMediaQuery(`(max-width: 800px)`);
+    const isSmallScreen = useMediaQuery(`(max-width: 750px)`);
     const itemData = [
         { img: beconnectedFeed, title: 'Feed' },
         { img: beconnectedJobs, title: 'Jobs' },
@@ -43,7 +43,7 @@ const Projects = () => {
             style={{
                 backgroundColor: '#eae7dc',
                 minHeight: '100vh',
-                padding: '50px',
+                padding: '50px 20px',
                 fontFamily: 'Poppins, sans-serif',
             }}
         >
@@ -76,6 +76,7 @@ const Projects = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
+                        width: isSmallScreen ? '100%' : 'auto',
                     },
                 }}
             >

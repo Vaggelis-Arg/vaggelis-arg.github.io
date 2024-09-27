@@ -1,8 +1,11 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
+import { useMediaQuery } from '@mui/material';
 
 const ParticlesBackground = () => {
+    const isSmallScreen = useMediaQuery('(max-width:600px)');
+    
     const particlesInit = async (main) => {
         await loadSlim(main);
     };
@@ -62,7 +65,7 @@ const ParticlesBackground = () => {
             number: {
                 density: {
                     enable: true,
-                    area: 700,
+                    area: isSmallScreen ? 550 : 700,
                 },
                 value: 55,
             },

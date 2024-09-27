@@ -19,7 +19,7 @@ const Resume = () => {
         style={{
             backgroundColor: '#eae7dc',
             minHeight: '100vh',
-            padding: '50px',
+            padding: isSmallScreen ? '50px 0' : '50px',
             fontFamily: 'Poppins, sans-serif',
         }}
         >
