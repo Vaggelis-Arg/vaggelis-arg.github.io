@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/vaggelis-arg.github.io/static/css/main.77f1a254.css",
+    "main.js": "/vaggelis-arg.github.io/static/js/main.8914fd03.js",
+    "static/media/beconnected-feed.png": "/vaggelis-arg.github.io/static/media/beconnected-feed.a3c05c193fb7cb13d564.png",
+    "static/media/nkua-logo.png": "/vaggelis-arg.github.io/static/media/nkua-logo.19f16f349409a9f83b2b.png",
+    "static/media/beconnected-notifications.png": "/vaggelis-arg.github.io/static/media/beconnected-notifications.55f32c05abaa258f58e1.png",
+    "static/media/beconnected-network.png": "/vaggelis-arg.github.io/static/media/beconnected-network.d0a101ecceb5f98d8724.png",
+    "static/media/beconnected-messages.png": "/vaggelis-arg.github.io/static/media/beconnected-messages.9ac1e94b4f39152a2bf7.png",
+    "static/media/beconnected-connections.png": "/vaggelis-arg.github.io/static/media/beconnected-connections.c2708171e3dd623748db.png",
+    "static/media/beconnected-profile.png": "/vaggelis-arg.github.io/static/media/beconnected-profile.c747a1a06b386eaef94c.png",
+    "static/media/beconnected-jobs.png": "/vaggelis-arg.github.io/static/media/beconnected-jobs.80889559b4df53c2faee.png",
+    "static/media/beconnected-settings.png": "/vaggelis-arg.github.io/static/media/beconnected-settings.23dcfa8ab9e34539f7b4.png",
+    "static/media/profile-image.jpg": "/vaggelis-arg.github.io/static/media/profile-image.a94bceee7c32c0a4c47e.jpg",
+    "static/media/othisi-school.png": "/vaggelis-arg.github.io/static/media/othisi-school.f33a05f126a0f82ed385.png",
+    "index.html": "/vaggelis-arg.github.io/index.html",
+    "main.77f1a254.css.map": "/vaggelis-arg.github.io/static/css/main.77f1a254.css.map",
+    "main.8914fd03.js.map": "/vaggelis-arg.github.io/static/js/main.8914fd03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77f1a254.css",
+    "static/js/main.8914fd03.js"
+  ]
+}
