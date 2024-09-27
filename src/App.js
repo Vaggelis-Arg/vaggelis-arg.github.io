@@ -12,7 +12,7 @@ import './style.css';
 
 function App() {
     return (
-        <Router basename="/vaggelis-arg.github.io">
+        <Router>
         <Navbar />
         <Routes>
         <Route path="/" element={
