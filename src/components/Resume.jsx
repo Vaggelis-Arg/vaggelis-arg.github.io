@@ -53,7 +53,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<WorkIcon />}
             >
-                <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
+                <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     Teaching Assistant
                 </Typography>
                 <img
@@ -92,7 +92,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658'  }}
             icon={<WorkIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
+            <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     Student Supervisor
                 </Typography>
                 <img
@@ -131,7 +131,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
+            <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     B.Sc. Computer Science
                 </Typography>
                 <img
@@ -171,7 +171,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
+            <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     High School
                 </Typography>
                 <img
@@ -211,7 +211,7 @@ const Resume = () => {
             iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658' }}
             icon={<SchoolIcon />}
             >
-            <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
+            <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
                     English C2
                 </Typography>
                 <Typography 
