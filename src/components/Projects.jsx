@@ -170,7 +170,13 @@ const Projects = () => {
                                 boxShadow: 3,
                                 cursor: 'pointer',
                                 transition: 'transform 0.3s ease',
-                                '&:hover': {
+                                '&:hover': isSmallScreen
+                                ? {
+                                    '& .overlay': {
+                                        opacity: 1,
+                                    },
+                                }
+                                : {
                                     transform: 'scale(1.05)',
                                     '& .overlay': {
                                         opacity: 1,

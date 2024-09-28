@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -9,6 +9,7 @@ import personalLogo from '../assets/personal-logo.png';
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [openMenu, setOpenMenu] = useState(false);
 
     const handleNavigate = (path) => {
@@ -20,6 +21,19 @@ const Navbar = () => {
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
     };
+
+    const handleResize = () => {
+        if (window.innerWidth > 900) {
+            setOpenMenu(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const menuOptions = [
         { label: 'Home', path: '/' },
@@ -35,7 +49,6 @@ const Navbar = () => {
                 sx={{
                     bgcolor: '#6e6658',
                     boxShadow: 'none',
-                    borderBottom: '1px solid #eae7dc',
                     zIndex: 3,
                     height: '50px',
                     justifyContent: 'center',
@@ -89,7 +102,7 @@ const Navbar = () => {
                     position: 'fixed',
                     top: '50px',
                     right: 0,
-                    width: '100%',
+                    width: 'auto',
                     display: 'flex',
                     flexDirection: 'column',
                     padding: '10px 20px',
@@ -97,20 +110,41 @@ const Navbar = () => {
                     transition: 'transform 0.3s ease, opacity 0.3s ease',
                     opacity: openMenu ? 1 : 0,
                     transform: openMenu ? 'translateY(0)' : 'translateY(-100%)',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    borderBottomLeftRadius: '8px',
+                    borderBottomRightRadius: '8px',
                 }}
             >
                 {menuOptions.map((option) => (
                     <Button
-                        key={option.label}
                         onClick={() => handleNavigate(option.path)}
                         sx={{
-                            color: '#eae7dc',
+                            color: location.pathname === option.path ? '#d8c3a5' : '#eae7dc',
                             textTransform: 'none',
-                            '&:hover': { color: '#d8c3a5' },
+                            '&:hover': {
+                                color: '#d8c3a5',
+                                transform: 'scale(1.05)',
+                                transition: 'transform 0.2s ease',
+                            },
                             my: 1,
                             fontFamily: 'Poppins, sans-serif',
                             fontSize: '14px',
-                            justifyContent: 'flex-end',
+                            justifyContent: 'center',
+                            width: 'auto',
+                            padding: '10px 15px',
+                            '&::after': {
+                                content: '""',
+                                position: 'absolute',
+                                left: '0',
+                                bottom: '0',
+                                width: '100%',
+                                height: '2px',
+                                backgroundColor: location.pathname === option.path ? '#d8c3a5' : 'transparent',
+                                transition: 'background-color 0.3s ease',
+                            },
+                            '&:hover::after': {
+                                backgroundColor: '#d8c3a5',
+                            },
                         }}
                     >
                         {option.label}
