@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e1480e74.css",
-    "main.js": "/static/js/main.49c9e4ed.js",
+    "main.js": "/static/js/main.32ea74e0.js",
     "static/media/beconnected-feed.png": "/static/media/beconnected-feed.a3c05c193fb7cb13d564.png",
     "static/media/nkua-logo.png": "/static/media/nkua-logo.19f16f349409a9f83b2b.png",
     "static/media/beconnected-notifications.png": "/static/media/beconnected-notifications.55f32c05abaa258f58e1.png",
@@ -15,10 +15,10 @@
     "static/media/othisi-school.png": "/static/media/othisi-school.f33a05f126a0f82ed385.png",
     "index.html": "/index.html",
     "main.e1480e74.css.map": "/static/css/main.e1480e74.css.map",
-    "main.49c9e4ed.js.map": "/static/js/main.49c9e4ed.js.map"
+    "main.32ea74e0.js.map": "/static/js/main.32ea74e0.js.map"
   },
   "entrypoints": [
     "static/css/main.e1480e74.css",
-    "static/js/main.49c9e4ed.js"
+    "static/js/main.32ea74e0.js"
   ]
 }
