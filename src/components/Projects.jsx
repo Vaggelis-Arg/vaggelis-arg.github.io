@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Card, CardContent, Box, ImageList, ImageListItem, useMediaQuery, Dialog } from '@mui/material';
+import { Typography, Card, CardContent, Box, ImageList, ImageListItem, useMediaQuery, Dialog, IconButton } from '@mui/material';
 import beconnectedFeed from '../assets/beconnected-feed.png';
 import beconnectedJobs from '../assets/beconnected-jobs.png';
 import beconnectedProfile from '../assets/beconnected-profile.png';
@@ -10,6 +10,8 @@ import beconnectedConnections from '../assets/beconnected-connections.png';
 import beconnectedSettings from '../assets/beconnected-settings.png';
 import LinkIcon from '@mui/icons-material/Link';
 import DataObjectIcon from '@mui/icons-material/DataObject';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Projects = () => {
     const isSmallScreen = useMediaQuery(`(max-width: 750px)`);
@@ -25,17 +27,27 @@ const Projects = () => {
     ];
 
     const [open, setOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
-    const handleClickOpen = (img) => {
-        setSelectedImage(img);
-        setOpen(true);
-    };
+	const handleClickOpen = (index) => {
+		setSelectedImageIndex(index);
+		setOpen(true);
+	};
 
-    const handleClose = () => {
-        setOpen(false);
-        setSelectedImage(null);
-    };
+	const handleClose = () => {
+		setOpen(false);
+		setSelectedImageIndex(null);
+	};
+
+	const handleNext = () => {
+		setSelectedImageIndex((prevIndex) => (prevIndex + 1) % itemData.length);
+	};
+
+	const handlePrevious = () => {
+		setSelectedImageIndex((prevIndex) => 
+			(prevIndex - 1 + itemData.length) % itemData.length
+		);
+	};
 
     return (
         <section
@@ -161,70 +173,91 @@ const Projects = () => {
                     cols={2} 
                     gap={2}
                 >
-                    {itemData.map((item) => (
-                        <ImageListItem
-                            key={item.img}
-                            sx={{
-                                position: 'relative',
-                                overflow: 'hidden',
-                                boxShadow: 3,
-                                cursor: 'pointer',
-                                transition: 'transform 0.3s ease',
-                                '&:hover': isSmallScreen
-                                ? {
-                                    '& .overlay': {
-                                        opacity: 1,
-                                    },
-                                }
-                                : {
-                                    transform: 'scale(1.05)',
-                                    '& .overlay': {
-                                        opacity: 1,
-                                    },
-                                },
-                            }}
-                            onClick={() => handleClickOpen(item.img)}
-                        >
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                loading="lazy"
-                                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                            />
-                            <Box
-                                className="overlay"
-                                sx={{
-                                    position: 'absolute',
-                                    bottom: 0,
-                                    left: 0,
-                                    right: 0,
-                                    opacity: 0,
-                                    transition: 'opacity 0.3s ease',
-                                    textAlign: 'center',
-                                    fontFamily: 'Poppins, sans-serif',
-                                }}
-                            >
-                                <Typography variant="body2">{item.title}</Typography>
-                            </Box>
-                        </ImageListItem>
-                    ))}
+                    {itemData.map((item, index) => (
+					<ImageListItem
+						key={item.img}
+						sx={{
+							position: 'relative',
+							overflow: 'hidden',
+							boxShadow: 3,
+							cursor: 'pointer',
+							transition: 'transform 0.3s ease',
+							'&:hover': isSmallScreen
+							? {
+								'& .overlay': {
+									opacity: 1,
+								},
+							}
+							: {
+								transform: 'scale(1.05)',
+								'& .overlay': {
+									opacity: 1,
+								},
+							},
+						}}
+						onClick={() => handleClickOpen(index)}
+					>
+						<img
+							src={item.img}
+							alt={item.title}
+							loading="lazy"
+							style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+						/>
+						<Box
+							className="overlay"
+							sx={{
+								position: 'absolute',
+								bottom: 0,
+								left: 0,
+								right: 0,
+								opacity: 0,
+								transition: 'opacity 0.3s ease',
+								textAlign: 'center',
+								fontFamily: 'Poppins, sans-serif',
+							}}
+						>
+							<Typography variant="body2">{item.title}</Typography>
+						</Box>
+					</ImageListItem>
+				))}
                 </ImageList>
-                <Dialog
-                    open={open}
-                    onClose={handleClose}
-                    maxWidth="lg"
-                    fullWidth={false}
-                    PaperProps={{
-                        sx: { width: '80%', height: 'auto' },
-                    }}
-                >
-                    {selectedImage && (
-                        <img
-                            src={selectedImage}
-                            alt="Selected"
-                        />
-                    )}
-                </Dialog>
+                <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth={false} PaperProps={{ sx: { width: '80%', height: 'auto' } }}>
+					{selectedImageIndex !== null && (
+						<Box sx={{ position: 'relative' }}>
+							<img src={itemData[selectedImageIndex].img} alt={itemData[selectedImageIndex].title} style={{ width: '100%', height: 'auto' }} />
+
+							<IconButton
+								onClick={handlePrevious}
+								sx={{
+									position: 'absolute',
+									top: '50%',
+									left: '10px',
+									transform: 'translateY(-50%)',
+									color: 'white',
+									backgroundColor: 'rgba(0, 0, 0, 0.5)',
+									'&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
+								}}
+							>
+								<ChevronLeftIcon fontSize="large" />
+							</IconButton>
+
+							<IconButton
+								onClick={handleNext}
+								sx={{
+									position: 'absolute',
+									top: '50%',
+									right: '10px',
+									transform: 'translateY(-50%)',
+									color: 'white',
+									backgroundColor: 'rgba(0, 0, 0, 0.5)',
+									'&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
+								}}
+							>
+								<ChevronRightIcon fontSize="large" />
+							</IconButton>
+						</Box>
+					)}
+				</Dialog>
                 </>
                 </Card>
                 <Card

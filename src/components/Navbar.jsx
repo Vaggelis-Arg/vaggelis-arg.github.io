@@ -76,7 +76,7 @@ const Navbar = () => {
                                 key={option.label}
                                 onClick={() => handleNavigate(option.path)}
                                 sx={{
-                                    color: '#eae7dc',
+                                    color: location.pathname === option.path ? '#d8c3a5' : '#eae7dc',
                                     textTransform: 'none',
                                     '&:hover': { color: '#d8c3a5' },
                                     mx: 1,

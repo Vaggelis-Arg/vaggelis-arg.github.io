@@ -75,7 +75,7 @@ const Resume = () => {
                     Department of Informatics, University Of Athens
                 </Typography>
                 <Typography variant="body1">
-                Volunteered in courses: Introduction in Programming, Data Structures & Algorithms in C
+                Volunteered in courses: Introduction in Programming, Data Structures & Algorithms in C.
                 </Typography>
             </VerticalTimelineElement>
 
@@ -114,7 +114,7 @@ const Resume = () => {
                 Othisi School
                 </Typography>
                 <Typography variant="body1">
-                    Supervision of students for their Panhellenic exams
+                    Supervision of students for their Panhellenic exams.
                 </Typography>
             </VerticalTimelineElement>
 
@@ -154,7 +154,7 @@ const Resume = () => {
                 </Typography>
                 <Typography variant="body1">
                 4 year program - 240 ECTS <br />
-                Current Grade: 9.15
+                Current Grade: 9.16/10.
                 </Typography>
             </VerticalTimelineElement>
 
@@ -193,7 +193,7 @@ const Resume = () => {
                     Othisi School
                 </Typography>
                 <Typography variant="body1">
-                Grade: Apolytirion GPA: 19.9/20 (“Excellent”) | Panhellenic Exams: 18.670/20.000 <br />
+                Grade: Apolytirion GPA: 19.9/20 (“Excellent”) | Panhellenic Exams: 18.670/20.000. <br />
                 Activities and societies: Succeeded in mathematical competition by Greek Mathematical Society 2 times.
                 </Typography>
             </VerticalTimelineElement>
@@ -221,7 +221,7 @@ const Resume = () => {
                     style={{ clear: 'both'}}
                 >
                     Certificate of Proficiency in English <br />
-                    from University of Michigan
+                    from University of Michigan.
                 </Typography>
             </VerticalTimelineElement>
         </VerticalTimeline>

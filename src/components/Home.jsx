@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, Typography, Box, Avatar, useMediaQuery } from '@mui/material';
-import profilePicture from '../assets/profile-image.jpg';
+import { Container, Grid, Typography, Box, Button, Avatar, useMediaQuery } from '@mui/material';
+import profilePicture from '../assets/profile-image2.jpg';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Home = () => {
     const isSmallScreen = useMediaQuery('(max-width:870px)');
@@ -12,6 +13,10 @@ const Home = () => {
             setNavbarHeight(navbar.offsetHeight);
         }
     }, []);
+
+    const scrollToAbout = () => {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <section
@@ -37,7 +42,7 @@ const Home = () => {
                             alt="Evangelos Argyropoulos"
                             sx={{
                                 width: '100%',
-                                maxWidth: isSmallScreen ? '227px' : '250px',
+                                maxWidth: isSmallScreen ? '227px' : '286.5px',
                                 height: 'auto',
                                 display: 'block',
                             }}
@@ -53,13 +58,60 @@ const Home = () => {
                                     color: '#6e6658',
                                     fontSize: isSmallScreen ? '2.15rem' : '3rem',
                                     fontFamily: 'Poppins, sans-serif',
+                                    animation: 'fadeInUp 1.2s ease forwards',
+                                    '@keyframes fadeInUp': {
+                                        '0%': { opacity: 0, transform: 'translateY(10px)' },
+                                        '100%': { opacity: 1, transform: 'translateY(0)' },
+                                    },
                                 }}
                             >
                                 Hi, I'm Vaggelis Argyropoulos
                             </Typography>
-                            <Typography paragraph sx={{ color: '#6e6658', fontFamily: 'Poppins, sans-serif' }}>
+                            <Typography paragraph sx={{
+                                color: '#6e6658',
+                                fontFamily: 'Poppins, sans-serif',
+                                animation: 'fadeInUp 1.2s ease forwards',
+                                '@keyframes fadeInUp': {
+                                    '0%': { opacity: 0, transform: 'translateY(10px)' },
+                                    '100%': { opacity: 1, transform: 'translateY(0)' },
+                                },
+                            }}>
                                 I'm a third-year undergraduate student in the Department of Informatics and Telecommunications at the University of Athens.
                             </Typography>
+
+                            <Box 
+                                sx={{
+                                    textAlign: 'center',
+                                    marginTop: isSmallScreen ? '1.4rem' : '1.7rem',
+                                }}
+                            >
+                                <Button
+                                    variant="contained"
+                                    onClick={scrollToAbout}
+                                    endIcon={<ExpandMoreIcon />}
+                                    sx={{
+                                        padding: '0.5rem 1rem',
+                                        borderRadius: '50px',
+                                        backgroundColor: '#6e6658',
+                                        color: '#eae7dc',
+                                        fontSize: '0.9rem',
+                                        fontFamily: 'Poppins, sans-serif',
+                                        textTransform: 'none',
+                                        transition: 'all 0.2s ease',
+										animation: 'fadeInUp 1.2s ease forwards',
+                                        '@keyframes fadeInUp': {
+                                            '0%': { opacity: 0, transform: 'translateY(10px)' },
+                                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                                        },
+                                        '&:hover': {
+                                            backgroundColor: '#8d8470',
+                                            transform: 'translateY(-1px)',
+                                        },
+                                    }}
+                                >
+                                    About Me
+                                </Button>
+                            </Box>
                         </Box>
                     </Grid>
                 </Grid>
