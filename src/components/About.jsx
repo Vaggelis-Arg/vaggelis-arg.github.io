@@ -115,7 +115,7 @@ const About = () => {
                         fontFamily: 'Poppins, sans-serif',
                     }}
                     >
-                        I'm passionate about computer science and its intersection with business. My goal is to gain skills that will help me develop and improve practical technology applications.
+                        I'm a computer scientist interested in how technology connects with business and influences everyday life through practical solutions.
                 </Typography>
             </Box>
             </Box>

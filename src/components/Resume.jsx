@@ -75,46 +75,7 @@ const Resume = () => {
                     Department of Informatics, University Of Athens
                 </Typography>
                 <Typography variant="body1">
-                Volunteered in courses: Introduction in Programming, Data Structures & Algorithms in C.
-                </Typography>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{
-                background: "#d8c3a5",
-                color: "#6e6658",
-                borderRadius: '15px',
-                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
-            date="2022 - 2023"
-            iconStyle={{ background: "#d8c3a5", color: "#6e6658", boxShadow: '0 0 0 3px #6e6658'  }}
-            icon={<WorkIcon />}
-            >
-            <Typography variant={isSmallScreen ? "h6" : "h5"} component="h3" sx={{ fontWeight: 'bold', fontFamily: 'Merriweather, serif' }}>
-                    Student Supervisor
-                </Typography>
-                <img
-                    src={othisiLogo}
-                    alt="Othisi Supervisor"
-                    style={{
-                        marginTop: '1rem',
-                        float: 'left',
-                        height: isSmallScreen ? '100px' : '130px',
-                        marginBottom: '0.3rem',
-                    }}
-                />
-                <Typography 
-                    variant="subtitle1" 
-                    component="h4" 
-                    color="textSecondary" 
-                    style={{ clear: 'both', marginTop: '0.5rem' }}
-                >
-                Othisi School
-                </Typography>
-                <Typography variant="body1">
-                    Supervision of students for their Panhellenic exams.
+                Courses: Introduction to Programming, Data Structures and Programming Techniques — Assisted students in lab sessions, helping them learn C programming and develop data structures using tools such as VSCode, Git, GitHub, Bash, Makefiles, unit testing, GCC, Valgrind, and Windows Subsystem for Linux.
                 </Typography>
             </VerticalTimelineElement>
 
@@ -154,7 +115,7 @@ const Resume = () => {
                 </Typography>
                 <Typography variant="body1">
                 4 year program - 240 ECTS <br />
-                Current Grade: 9.16/10.
+                Current Grade: 9.18/10.
                 </Typography>
             </VerticalTimelineElement>
 

@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 import personalLogo from '../assets/personal-logo.png';
 
 const Navbar = () => {
@@ -70,24 +72,43 @@ const Navbar = () => {
                             style={{ height: '35px', marginRight: '20px' }}
                         />
                     </Box>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-                        {menuOptions.map((option) => (
-                            <Button
-                                key={option.label}
-                                onClick={() => handleNavigate(option.path)}
-                                sx={{
-                                    color: location.pathname === option.path ? '#d8c3a5' : '#eae7dc',
-                                    textTransform: 'none',
-                                    '&:hover': { color: '#d8c3a5' },
-                                    mx: 1,
-                                    fontFamily: 'Poppins, sans-serif',
-                                    fontSize: '14px',
-                                }}
-                            >
-                                {option.label}
-                            </Button>
-                        ))}
-                    </Box>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+					{menuOptions.map((option, index) => (
+						<Box
+						key={option.label}
+						sx={{
+							position: 'relative',
+							px: 2.2,
+							'&:not(:last-child)::after': {
+							content: '""',
+							position: 'absolute',
+							right: 0,
+							top: '50%',
+							transform: 'translateY(-50%)',
+							height: '16px',
+							borderLeft: '2px solid #eae7dc',
+							opacity: 0.7,
+							},
+						}}
+						>
+						<Button
+							onClick={() => handleNavigate(option.path)}
+							disableRipple
+							disableFocusRipple
+							disableTouchRipple
+							sx={{
+							color: location.pathname === option.path ? '#d8c3a5' : '#eae7dc',
+							textTransform: 'none',
+							'&:hover': { color: '#d8c3a5' },
+							fontFamily: 'Poppins, sans-serif',
+							fontSize: '14px',
+							}}
+						>
+							{option.label}
+						</Button>
+						</Box>
+					))}
+					</Box>
                     <IconButton
                         sx={{ display: { xs: 'block', md: 'none' }, color: '#eae7dc' }}
                         onClick={toggleMenu}

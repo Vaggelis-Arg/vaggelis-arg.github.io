@@ -1,361 +1,336 @@
 import React, { useState } from 'react';
-import { Typography, Card, CardContent, Box, ImageList, ImageListItem, useMediaQuery, Dialog, IconButton } from '@mui/material';
-import beconnectedFeed from '../assets/beconnected-feed.png';
-import beconnectedJobs from '../assets/beconnected-jobs.png';
-import beconnectedProfile from '../assets/beconnected-profile.png';
-import beconnectedMessages from '../assets/beconnected-messages.png';
-import beconnectedNetwork from '../assets/beconnected-network.png';
-import beconnectedNotifications from '../assets/beconnected-notifications.png';
-import beconnectedConnections from '../assets/beconnected-connections.png';
-import beconnectedSettings from '../assets/beconnected-settings.png';
+import {
+  Typography,
+  Card,
+  CardContent,
+  Box,
+  Grid,
+  useMediaQuery,
+  Button,
+} from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
-import DataObjectIcon from '@mui/icons-material/DataObject';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SyncIcon from '@mui/icons-material/Sync';
+import { styled } from '@mui/system';
+import babyPicture from '../assets/baby-picture.png';
+
+
+const LogoContainer = styled('div')(() => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '10px',
+  marginBottom: '10px',
+}));
+const Logo = styled('div')({
+  width: '40px',
+  height: '40px',
+  overflow: 'hidden',
+  borderRadius: '50%',
+});
+const LogoImage = styled('img')({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+});
+const LogoText = styled('span')({
+  fontSize: '1.25rem',
+  fontWeight: 'bold',
+  fontFamily: 'Poppins, sans-serif',
+  color: '#000',
+});
 
 const Projects = () => {
-    const isSmallScreen = useMediaQuery(`(max-width: 750px)`);
-    const itemData = [
-        { img: beconnectedFeed, title: 'Feed' },
-        { img: beconnectedJobs, title: 'Jobs' },
-        { img: beconnectedProfile, title: 'Profile' },
-        { img: beconnectedMessages, title: 'Messages' },
-        { img: beconnectedNetwork, title: 'Network' },
-        { img: beconnectedNotifications, title: 'Notifications' },
-        { img: beconnectedConnections, title: 'Connections' },
-        { img: beconnectedSettings, title: 'Settings' }
-    ];
+  const isSmallScreen = useMediaQuery('(max-width:750px)');
 
-    const [open, setOpen] = useState(false);
-	const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  return (
+    <section
+      id="projects"
+      style={{
+        backgroundColor: '#eae7dc',
+        minHeight: '100vh',
+        padding: '40px 30px',
+        fontFamily: 'Poppins, sans-serif',
+      }}
+    >
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        sx={{
+          marginBottom: '40px',
+          marginTop: '70px',
+          color: '#6e6658',
+          fontSize: '2rem',
+          letterSpacing: '0.1em',
+        }}
+      >
+        Projects
+      </Typography>
 
-	const handleClickOpen = (index) => {
-		setSelectedImageIndex(index);
-		setOpen(true);
-	};
-
-	const handleClose = () => {
-		setOpen(false);
-		setSelectedImageIndex(null);
-	};
-
-	const handleNext = () => {
-		setSelectedImageIndex((prevIndex) => (prevIndex + 1) % itemData.length);
-	};
-
-	const handlePrevious = () => {
-		setSelectedImageIndex((prevIndex) => 
-			(prevIndex - 1 + itemData.length) % itemData.length
-		);
-	};
-
-    return (
-        <section
-            id="projects"
-            style={{
-                backgroundColor: '#eae7dc',
-                minHeight: '100vh',
-                padding: '50px 20px',
-                fontFamily: 'Poppins, sans-serif',
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch">
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              backgroundColor: '#d8c3a5',
+              color: '#6e6658',
+              boxShadow: 8,
+              p: 1.5,
+              textAlign: 'center',
+              borderRadius: 0,
+              height: '100%',
+              '&:hover': {
+                transform: 'scale(1.01)',
+                transition: 'transform 0.3s',
+              },
             }}
-        >
-            <Typography
-                variant="h4"
-                align="center"
-                gutterBottom
-                sx={{
-                    marginBottom: '40px',
-                    marginTop: '70px',
-                    fontFamily: 'Poppins, sans-serif',
-                    color: '#6e6658',
-                    fontSize: '2rem',
-                    letterSpacing: '0.1em',
-                }}
+          >
+            <a
+              href="https://github.com/Vaggelis-Arg/beconnected"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
-                Projects
-            </Typography>
-            
-            <Box
-                sx={{
+              <CardContent>
+                <Typography
+                  variant="h4"
+                  noWrap
+                  sx={{
                     display: 'flex',
                     justifyContent: 'center',
-                    gap: '30px',
-                    alignItems: 'stretch',
-                    flexDirection: isSmallScreen ? 'column' : 'row',
-                    flexWrap: 'wrap',
-                    '& > *': {
-                        flexBasis: isSmallScreen ? '100%' : '34%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        width: isSmallScreen ? '100%' : 'auto',
-                    },
-                }}
+                    alignItems: 'center',
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    color: '#0a66c2',
+                    fontSize: isSmallScreen ? '1.5rem' : '1.8rem',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Be
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '20%',
+                      bgcolor: '#0a66c2',
+                      width: isSmallScreen ? '2.2rem' : '3rem',
+                      height: isSmallScreen ? '2.2rem' : '3rem',
+                      mx: 0.5,
+                    }}
+                  >
+                    <LinkIcon sx={{ fontSize: isSmallScreen ? '1.5rem' : '2rem', color: '#d8c3a5' }} />
+                  </Box>
+                  Connected
+                </Typography>
+                <Typography
+                  sx={{
+                    color: '#6e6658',
+                    fontFamily: 'Poppins, sans-serif',
+                    mt: 1.5,
+                    textAlign: 'left',
+                    fontSize: '0.95rem',
+                  }}
+                >
+                  BeConnected is a professional networking app, similar to LinkedIn,
+                  developed during the Internet Technologies & Applications course at NKUA.
+                  Administrators manage users and exports; Professionals manage their
+                  profiles, connections, and content. Built with Spring Boot, MySQL,
+                  React and JavaScript.
+                </Typography>
+              </CardContent>
+            </a>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              backgroundColor: '#d8c3a5',
+              color: '#6e6658',
+              boxShadow: 8,
+              p: 1.5,
+              textAlign: 'center',
+              borderRadius: 0,
+              height: '100%',
+              '&:hover': {
+                transform: 'scale(1.01)',
+                transition: 'transform 0.3s',
+              },
+            }}
+          >
+            <a
+              href="https://github.com/Vaggelis-Arg/Amazon-Ecommerce-Analysis"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
-                <Card
-                    sx={{
-                        backgroundColor: '#d8c3a5',
-                        color: '#6e6658',
-                        boxShadow: 8,
-                        padding: '20px',
-                        textAlign: 'center',
-                        borderRadius: 0,
-                        '&:hover': {
-                                    transform: 'scale(1.01)',
-                                    transition: 'transform 0.3s ease-in-out',
-                                },
-                    }}
+              <CardContent>
+                <ShoppingCartIcon sx={{ fontSize: 40, color: '#4a4a44', mb: 1 }} />
+                <Typography
+				variant="h5"
+				sx={{
+					fontFamily: 'monospace',
+					fontWeight: 700,
+					color: '#4a4a44',
+					whiteSpace: 'normal',
+					wordBreak: 'break-word',
+				}}
+				>
+				Amazon Ecommerce Analysis
+				</Typography>
+                <Typography
+                  sx={{
+                    color: '#6e6658',
+                    fontFamily: 'Poppins, sans-serif',
+                    mt: 1.5,
+                    textAlign: 'left',
+                    fontSize: '0.9rem',
+                  }}
                 >
-                    <a href="https://github.com/Vaggelis-Arg/beconnected" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <CardContent>
-                        <Typography
-                            variant="h4"
-                            noWrap
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                color: '#0a66c2',
-                                textDecoration: 'none',
-                                fontSize: isSmallScreen ?  '2.5rem' : {xs: '1.2rem', md: '2.5rem'},
-                                lineHeight: '1.2',
-                            }}
-                        >
-                            Be
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: '20%',
-                                    bgcolor: '#0a66c2',
-                                    width: '3.5rem',
-                                    height: '3.5rem',
-                                    mr: 0.5,
-                                    ml: 0.5,
-                                }}
-                            >
-                                <LinkIcon
-                                    sx={{
-                                        fontSize: {md: '2.75rem'},
-                                        color: '#d8c3a5',
-                                    }}
-                                />
-                            </Box>
-                            Connected
-                        </Typography>
-                            <Typography
-                                paragraph
-                                sx={{
-                                    color: '#6e6658',
-                                    fontFamily: 'Poppins, sans-serif',
-                                    marginTop: '1.5rem',
-                                }}
-                            >
-                                BeConnected is a professional networking app, similar to LinkedIn, that my classmate and I developed as part
-                                of the Internet Technologies and Applications course at the National and Kapodistrian University of Athens.
-                                The app features two roles: Administrators, who manage users and export data, and Professionals, who manage
-                                their profiles, connections, and content. BeConnected is built on a client-server model, utilizing Spring Boot
-                                and MySQL for the server side and React with JavaScript for the client side.
-                            </Typography>
-                        </CardContent>
-                    </a>
-                    <>
-                    <ImageList
-                    sx={{
-                        width: '100%',
-                        marginTop: '20px',
-                        gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
-                        gap: 3,
-                    }}
-                    cols={2} 
-                    gap={2}
+                  A data mining project analyzing Amazon product reviews, covering
+                  sentiment analysis, recommendation systems, and clustering using Python
+                  and machine learning. Processes JSON data, extracts insights, and builds
+                  ML models for e-commerce trends.
+                </Typography>
+              </CardContent>
+            </a>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              backgroundColor: '#d8c3a5',
+              color: '#6e6658',
+              boxShadow: 8,
+              p: 1.5,
+              textAlign: 'center',
+              borderRadius: 0,
+              height: '100%',
+              '&:hover': {
+                transform: 'scale(1.01)',
+                transition: 'transform 0.3s',
+              },
+            }}
+          >
+            <a
+              href="https://github.com/Vaggelis-Arg/FileSync-Systems"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <CardContent>
+                <SyncIcon sx={{ fontSize: 40, color: '#4a4a44', mb: 1 }} />
+                <Typography
+                  variant="h5"
+                  noWrap
+                  sx={{
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    color: '#4a4a44',
+                  }}
                 >
-                    {itemData.map((item, index) => (
-					<ImageListItem
-						key={item.img}
-						sx={{
-							position: 'relative',
-							overflow: 'hidden',
-							boxShadow: 3,
-							cursor: 'pointer',
-							transition: 'transform 0.3s ease',
-							'&:hover': isSmallScreen
-							? {
-								'& .overlay': {
-									opacity: 1,
-								},
-							}
-							: {
-								transform: 'scale(1.05)',
-								'& .overlay': {
-									opacity: 1,
-								},
-							},
-						}}
-						onClick={() => handleClickOpen(index)}
-					>
-						<img
-							src={item.img}
-							alt={item.title}
-							loading="lazy"
-							style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-						/>
-						<Box
-							className="overlay"
-							sx={{
-								position: 'absolute',
-								bottom: 0,
-								left: 0,
-								right: 0,
-								opacity: 0,
-								transition: 'opacity 0.3s ease',
-								textAlign: 'center',
-								fontFamily: 'Poppins, sans-serif',
-							}}
-						>
-							<Typography variant="body2">{item.title}</Typography>
-						</Box>
-					</ImageListItem>
-				))}
-                </ImageList>
-                <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth={false} PaperProps={{ sx: { width: '80%', height: 'auto' } }}>
-					{selectedImageIndex !== null && (
-						<Box sx={{ position: 'relative' }}>
-							<img src={itemData[selectedImageIndex].img} alt={itemData[selectedImageIndex].title} style={{ width: '100%', height: 'auto' }} />
-
-							<IconButton
-								onClick={handlePrevious}
-								sx={{
-									position: 'absolute',
-									top: '50%',
-									left: '10px',
-									transform: 'translateY(-50%)',
-									color: 'white',
-									backgroundColor: 'rgba(0, 0, 0, 0.5)',
-									'&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
-								}}
-							>
-								<ChevronLeftIcon fontSize="large" />
-							</IconButton>
-
-							<IconButton
-								onClick={handleNext}
-								sx={{
-									position: 'absolute',
-									top: '50%',
-									right: '10px',
-									transform: 'translateY(-50%)',
-									color: 'white',
-									backgroundColor: 'rgba(0, 0, 0, 0.5)',
-									'&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
-								}}
-							>
-								<ChevronRightIcon fontSize="large" />
-							</IconButton>
-						</Box>
-					)}
-				</Dialog>
-                </>
-                </Card>
-                <Card
-                    sx={{
-                        backgroundColor: '#d8c3a5',
-                        color: '#4a4a44',
-                        boxShadow: 8,
-                        padding: '20px',
-                        textAlign: 'center',
-                        borderRadius: 0,
-                        '&:hover': {
-                                    transform: 'scale(1.01)',
-                                    transition: 'transform 0.3s ease-in-out',
-                                },
-                    }}
+                  FileSync Systems
+                </Typography>
+                <Typography
+                  sx={{
+                    color: '#6e6658',
+                    fontFamily: 'Poppins, sans-serif',
+                    mt: 1.5,
+                    textAlign: 'left',
+                    fontSize: '0.9rem',
+                  }}
                 >
-                    <a href="https://github.com/Vaggelis-Arg/C-data-structures" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <CardContent>
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    mb: 2,
-                                }}
-                            >
-                                <DataObjectIcon
-                                    sx={{
-                                        fontSize: { md: '3.2rem' },
-                                        color: '#4a4a44',
-                                        mr: 1,
-                                    }}
-                                />
-                                <Typography
-                                    variant="h5"
-                                    component="div"
-                                    sx={{
-                                        fontSize: { md: '2.2rem' },
-                                        fontWeight: 700,
-                                        fontFamily: 'monospace',
-                                        color: '#4a4a44',
-                                    }}
-                                >
-                                    C-data-structures
-                                </Typography>
-                            </Box>
+                  Projects from my 3rd-year Systems Programming course at the National & Kapodistrian
+                  University of Athens.<br/><br/>
+                  • <strong>FSS</strong>: Synchronizes local directories with inotify, fork/exec, and named pipes.<br/>
+                  • <strong>NFS</strong>: Synchronizes remote directories over TCP sockets & threads.
+                </Typography>
+              </CardContent>
+            </a>
+          </Card>
+        </Grid>
 
-                            <Typography
-                                paragraph
-                                sx={{
-                                    color: '#6e6658',
-                                    fontFamily: 'Poppins, sans-serif',
-                                    marginTop: '2.5rem',
-                                }}
-                            >
-                                A collection of various data structures implemented in C using void pointers and macros.
-                                Each data structure in this project is designed to provide efficient and flexible solutions to common
-                                programming challenges. The use of void pointers and macros allows for a generic implementation that can
-                                handle different types of data.
-                            </Typography>
-                            <Typography
-                                paragraph
-                                sx={{
-                                    color: '#6e6658',
-                                    fontFamily: 'Poppins, sans-serif',
-                                    marginTop: '1rem',
-                                }}
-                            >
-                                The project includes the following data structures:
-                            </Typography>
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '8px',
-                                    marginTop: '1rem',
-                                }}
-                            >
-                                {['AVL tree', 'Bloom Filter', 'Double Hashing Hash Table', 'Double Linked List', 'Priority Queue', 'Queue', 'Red Black Tree', 'Separate Chaining Hash Table', 'Skip List', 'Stack', 'Vector'].map((item) => (
-                                    <Box
-                                        key={item}
-                                        sx={{
-                                            color: '#6e6658',
-                                            fontFamily: 'Poppins, sans-serif',
-                                            textAlign: 'center',
-                                            boxShadow: 'none',
-                                        }}
-                                    >
-                                        {item}
-                                    </Box>
-                                ))}
-                            </Box>
-                        </CardContent>
-                    </a>
-                </Card>
-            </Box>
-        </section>
-    );
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              backgroundColor: '#d8c3a5',
+              color: '#6e6658',
+              boxShadow: 8,
+              p: 1.5,
+              textAlign: 'center',
+              borderRadius: 0,
+              height: '100%',
+              '&:hover': {
+                transform: 'scale(1.01)',
+                transition: 'transform 0.3s',
+              },
+            }}
+          >
+            <a
+              href="https://github.com/Vaggelis-Arg/GovGR-Babysitting-Website-Redesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <CardContent>
+                <LogoContainer>
+                  <Logo>
+                    <LogoImage src={babyPicture} alt="Baby" />
+                  </Logo>
+                  <LogoText>Babysitters-Website</LogoText>
+                </LogoContainer>
+                <Typography
+                  sx={{
+                    color: '#6e6658',
+                    fontFamily: 'Poppins, sans-serif',
+                    mt: 1.5,
+                    textAlign: 'left',
+                    fontSize: '0.9rem',
+                  }}
+                >
+                  The Babysitters website helps families find babysitters in their local area and allows babysitters
+                  to offer their services. Parents can search based on location, child age, and availability, while
+                  babysitters list skills, experience, and schedules. Features include profile management, scheduling,
+                  payment handling, appointment booking, and reviews.
+                </Typography>
+              </CardContent>
+            </a>
+          </Card>
+        </Grid>
+      </Grid>
+	  <Box
+		sx={{
+			display: 'flex',
+			justifyContent: 'center',
+			mt: 5,
+		}}
+		>
+		<Button
+			variant="outlined"
+			color="secondary"
+			href="https://github.com/Vaggelis-Arg"
+			target="_blank"
+			startIcon={<GitHubIcon />}
+			sx={{
+			borderColor: '#6e6658',
+			color: '#6e6658',
+			'&:hover': {
+				backgroundColor: '#6e6658',
+				color: '#ffffff',
+			},
+			fontFamily: 'Poppins, sans-serif',
+			fontWeight: 600,
+			textTransform: 'none',
+			}}
+		>
+			View all my projects on GitHub
+		</Button>
+		</Box>
+    </section>
+  );
 };
 
 export default Projects;
