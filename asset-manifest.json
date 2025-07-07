@@ -1,24 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.77f1a254.css",
-    "main.js": "/static/js/main.c03f7996.js",
-    "static/media/beconnected-feed.png": "/static/media/beconnected-feed.a3c05c193fb7cb13d564.png",
+    "main.js": "/static/js/main.98d1ba49.js",
     "static/media/nkua-logo.png": "/static/media/nkua-logo.19f16f349409a9f83b2b.png",
-    "static/media/beconnected-notifications.png": "/static/media/beconnected-notifications.55f32c05abaa258f58e1.png",
-    "static/media/beconnected-network.png": "/static/media/beconnected-network.d0a101ecceb5f98d8724.png",
-    "static/media/beconnected-messages.png": "/static/media/beconnected-messages.9ac1e94b4f39152a2bf7.png",
-    "static/media/beconnected-connections.png": "/static/media/beconnected-connections.c2708171e3dd623748db.png",
-    "static/media/beconnected-profile.png": "/static/media/beconnected-profile.c747a1a06b386eaef94c.png",
-    "static/media/beconnected-jobs.png": "/static/media/beconnected-jobs.80889559b4df53c2faee.png",
-    "static/media/beconnected-settings.png": "/static/media/beconnected-settings.23dcfa8ab9e34539f7b4.png",
     "static/media/profile-image2.jpg": "/static/media/profile-image2.d6fe8998711efaecd5df.jpg",
     "static/media/othisi-school.png": "/static/media/othisi-school.f33a05f126a0f82ed385.png",
+    "static/media/baby-picture.png": "/static/media/baby-picture.7c94e8e2a93e7d986c43.png",
     "index.html": "/index.html",
     "main.77f1a254.css.map": "/static/css/main.77f1a254.css.map",
-    "main.c03f7996.js.map": "/static/js/main.c03f7996.js.map"
+    "main.98d1ba49.js.map": "/static/js/main.98d1ba49.js.map"
   },
   "entrypoints": [
     "static/css/main.77f1a254.css",
-    "static/js/main.c03f7996.js"
+    "static/js/main.98d1ba49.js"
   ]
 }
