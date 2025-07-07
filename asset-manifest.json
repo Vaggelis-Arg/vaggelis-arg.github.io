@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.77f1a254.css",
-    "main.js": "/static/js/main.98d1ba49.js",
+    "main.js": "/static/js/main.2eb1c5dd.js",
     "static/media/nkua-logo.png": "/static/media/nkua-logo.19f16f349409a9f83b2b.png",
     "static/media/profile-image2.jpg": "/static/media/profile-image2.d6fe8998711efaecd5df.jpg",
     "static/media/othisi-school.png": "/static/media/othisi-school.f33a05f126a0f82ed385.png",
     "static/media/baby-picture.png": "/static/media/baby-picture.7c94e8e2a93e7d986c43.png",
     "index.html": "/index.html",
     "main.77f1a254.css.map": "/static/css/main.77f1a254.css.map",
-    "main.98d1ba49.js.map": "/static/js/main.98d1ba49.js.map"
+    "main.2eb1c5dd.js.map": "/static/js/main.2eb1c5dd.js.map"
   },
   "entrypoints": [
     "static/css/main.77f1a254.css",
-    "static/js/main.98d1ba49.js"
+    "static/js/main.2eb1c5dd.js"
   ]
 }
