@@ -44,55 +44,6 @@ const Resume = () => {
 
       <VerticalTimeline lineColor="#6e6658">
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{
-            background: "#d8c3a5",
-            color: "#6e6658",
-            borderRadius: "15px",
-            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
-          }}
-          contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
-          date="2023-2024"
-          iconStyle={{
-            background: "#d8c3a5",
-            color: "#6e6658",
-            boxShadow: "0 0 0 3px #6e6658",
-          }}
-          icon={<WorkIcon />}
-        >
-          <Typography
-            variant={isSmallScreen ? "h6" : "h5"}
-            component="h3"
-            sx={{ fontWeight: "bold", fontFamily: "Merriweather, serif" }}
-          >
-            Teaching Assistant
-          </Typography>
-          <img
-            src={nkuaLogo}
-            alt="Teaching Assistant"
-            style={{
-              marginTop: "1rem",
-              float: "left",
-              height: isSmallScreen ? "68.5px" : "90px",
-              marginBottom: "0.3rem",
-            }}
-          />
-          <Typography
-            variant="subtitle1"
-            component="h4"
-            color="textSecondary"
-            style={{ clear: "both", marginTop: "0.5rem" }}
-          >
-            Department of Informatics, University Of Athens
-          </Typography>
-          <Typography variant="body1">
-            Courses: Introduction to Programming, Data Structures and
-            Programming Techniques — Assisted students in lab sessions, helping
-            them learn C programming and develop data structures.
-          </Typography>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
           className="vertical-timeline-element--education"
           contentStyle={{
             background: "#d8c3a5",
@@ -139,54 +90,6 @@ const Resume = () => {
             Attending postgraduate-level courses in Advanced Machine Learning
             and Cybersecurity during the Fall 2025-26 semester as part of an
             Erasmus mobility program.
-          </Typography>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          contentStyle={{
-            background: "#d8c3a5",
-            color: "#6e6658",
-            borderRadius: "15px",
-            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
-          }}
-          contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
-          date="2022 - Present"
-          iconStyle={{
-            background: "#d8c3a5",
-            color: "#6e6658",
-            boxShadow: "0 0 0 3px #6e6658",
-          }}
-          icon={<SchoolIcon />}
-        >
-          <Typography
-            variant={isSmallScreen ? "h6" : "h5"}
-            component="h3"
-            sx={{ fontWeight: "bold", fontFamily: "Merriweather, serif" }}
-          >
-            B.Sc. Computer Science
-          </Typography>
-          <img
-            src={nkuaLogo}
-            alt="Computer Science Student"
-            style={{
-              marginTop: "1rem",
-              float: "left",
-              height: isSmallScreen ? "68.5px" : "90px",
-              marginBottom: "0.3rem",
-            }}
-          />
-          <Typography
-            variant="subtitle1"
-            component="h4"
-            color="textSecondary"
-            style={{ clear: "both", marginTop: "0.5rem" }}
-          >
-            Department of Informatics, University Of Athens
-          </Typography>
-          <Typography variant="body1">
-            4 year program - 240 ECTS <br />
-            Current Grade: 9.22/10.
           </Typography>
         </VerticalTimelineElement>
 
@@ -244,6 +147,103 @@ const Resume = () => {
             Odyssey of Wisdom empowers Greek youth from underserved regions by
             facilitating access to Erasmus+ opportunities across Europe through
             volunteering initiatives.
+          </Typography>
+        </VerticalTimelineElement>
+		
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            borderRadius: "15px",
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+          }}
+          contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
+          date="2023-2024"
+          iconStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            boxShadow: "0 0 0 3px #6e6658",
+          }}
+          icon={<WorkIcon />}
+        >
+          <Typography
+            variant={isSmallScreen ? "h6" : "h5"}
+            component="h3"
+            sx={{ fontWeight: "bold", fontFamily: "Merriweather, serif" }}
+          >
+            Teaching Assistant
+          </Typography>
+          <img
+            src={nkuaLogo}
+            alt="Teaching Assistant"
+            style={{
+              marginTop: "1rem",
+              float: "left",
+              height: isSmallScreen ? "68.5px" : "90px",
+              marginBottom: "0.3rem",
+            }}
+          />
+          <Typography
+            variant="subtitle1"
+            component="h4"
+            color="textSecondary"
+            style={{ clear: "both", marginTop: "0.5rem" }}
+          >
+            Department of Informatics, University Of Athens
+          </Typography>
+          <Typography variant="body1">
+            Courses: Introduction to Programming, Data Structures and
+            Programming Techniques — Assisted students in lab sessions, helping
+            them learn C programming and develop data structures.
+          </Typography>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            borderRadius: "15px",
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+          }}
+          contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
+          date="2022 - Present"
+          iconStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            boxShadow: "0 0 0 3px #6e6658",
+          }}
+          icon={<SchoolIcon />}
+        >
+          <Typography
+            variant={isSmallScreen ? "h6" : "h5"}
+            component="h3"
+            sx={{ fontWeight: "bold", fontFamily: "Merriweather, serif" }}
+          >
+            B.Sc. Computer Science
+          </Typography>
+          <img
+            src={nkuaLogo}
+            alt="Computer Science Student"
+            style={{
+              marginTop: "1rem",
+              float: "left",
+              height: isSmallScreen ? "68.5px" : "90px",
+              marginBottom: "0.3rem",
+            }}
+          />
+          <Typography
+            variant="subtitle1"
+            component="h4"
+            color="textSecondary"
+            style={{ clear: "both", marginTop: "0.5rem" }}
+          >
+            Department of Informatics, University Of Athens
+          </Typography>
+          <Typography variant="body1">
+            4 year program - 240 ECTS <br />
+            Current Grade: 9.22/10.
           </Typography>
         </VerticalTimelineElement>
 
