@@ -83,11 +83,10 @@ const Resume = () => {
             color="textSecondary"
             style={{ clear: "both", marginTop: "0.5rem" }}
           >
-            Departments of Computer Science, Information Engineering and
-            Electronics, and Computer, Automation and Management Engineering
+            Departments of Computer Science and Engineering
           </Typography>
           <Typography variant="body1">
-            Attending postgraduate-level courses in Advanced Machine Learning
+            Attending courses in Deep Learning
             and Cybersecurity during the Fall 2025-26 semester as part of an
             Erasmus mobility program.
           </Typography>
@@ -143,7 +142,7 @@ const Resume = () => {
             </a>
           </Typography>
           <Typography variant="body1">
-            Co-founder of a youth-led nonprofit based in Ancient Olympia.
+            Co-founder of a youth-led nonprofit organization based in Ancient Olympia.
             Odyssey of Wisdom empowers Greek youth from underserved regions by
             facilitating access to Erasmus+ opportunities across Europe through
             volunteering initiatives.
@@ -243,7 +242,7 @@ const Resume = () => {
           </Typography>
           <Typography variant="body1">
             4 year program - 240 ECTS <br />
-            Current Grade: 9.22/10.
+            Current Grade: 9.06/10.
           </Typography>
         </VerticalTimelineElement>
 
