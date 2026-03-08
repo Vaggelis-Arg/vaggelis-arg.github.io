@@ -38,10 +38,10 @@ const Navbar = () => {
     }, []);
 
     const menuOptions = [
-        { label: 'Home', path: '/' },
-        { label: 'Resume', path: '/resume' },
-        { label: 'Projects', path: '/projects' },
-        { label: 'Contact', path: '/contact' },
+      { label: "Home", path: "/" },
+      { label: "Resume", path: "/resume" },
+      { label: "Portfolio", path: "/portfolio" },
+      { label: "Contact", path: "/contact" },
     ];
 
     return (

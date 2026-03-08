@@ -86,9 +86,13 @@ const Resume = () => {
             Departments of Computer Science and Engineering
           </Typography>
           <Typography variant="body1">
-            Attending courses in Deep Learning
-            and Cybersecurity during the Fall 2025-26 semester as part of an
-            Erasmus mobility program.
+            Attended courses in Deep Learning and Cybersecurity as part of the
+            Erasmus mobility program. The focus of my Erasmus semester was
+            Machine Learning Security, which I began through a 2nd-year Master's
+            course in the subject. In the course, I completed a project on
+            phishing emails and gave a 25-minute in-class presentation on
+            federated learning inference attacks, finishing with the top grade
+            cum laude.
           </Typography>
         </VerticalTimelineElement>
 
@@ -142,13 +146,13 @@ const Resume = () => {
             </a>
           </Typography>
           <Typography variant="body1">
-            Co-founder of a youth-led nonprofit organization based in Ancient Olympia.
-            Odyssey of Wisdom empowers Greek youth from underserved regions by
-            facilitating access to Erasmus+ opportunities across Europe through
-            volunteering initiatives.
+            Co-founder of a youth-led nonprofit organization based in Ancient
+            Olympia. Odyssey of Wisdom empowers Greek youth from underserved
+            regions by facilitating access to Erasmus+ opportunities across
+            Europe through volunteering initiatives.
           </Typography>
         </VerticalTimelineElement>
-		
+
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{
@@ -193,8 +197,8 @@ const Resume = () => {
           </Typography>
           <Typography variant="body1">
             Courses: Introduction to Programming, Data Structures and
-            Programming Techniques — Assisted students in lab sessions, helping
-            them learn C programming and develop data structures.
+            Programming Techniques. — Taught programming and data structures in
+            C to undergraduate students during lab sessions.
           </Typography>
         </VerticalTimelineElement>
 
@@ -241,8 +245,8 @@ const Resume = () => {
             Department of Informatics, University Of Athens
           </Typography>
           <Typography variant="body1">
-            4 year program - 240 ECTS <br />
-            Current Grade: 9.06/10.
+            Current Grade: 9.08/10 (highest honors). <br />4 year program - 240
+            ECTS.
           </Typography>
         </VerticalTimelineElement>
 
@@ -289,7 +293,7 @@ const Resume = () => {
             Othisi School
           </Typography>
           <Typography variant="body1">
-            Grade: Apolytirion GPA: 19.9/20 (“Excellent”) | Panhellenic Exams:
+            Apolytirion GPA: 19.9/20 (“Excellent”) | Panhellenic Exams Grade:
             18.670/20.000. <br />
             Activities and societies: Succeeded in mathematical competition by
             Greek Mathematical Society 2 times.

@@ -3,124 +3,127 @@ import { Container, Typography, Box } from '@mui/material';
 
 const About = () => {
     return (
-        <section
+      <section
         id="about"
         style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '2rem 0',
-            position: 'relative',
-            zIndex: 1,
-            width: '100%',
-            margin: '0 0 10rem 0',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "2rem 0",
+          position: "relative",
+          zIndex: 1,
+          width: "100%",
+          margin: "0 0 10rem 0",
         }}
-        >
+      >
         <Container
-            maxWidth={false}
-            style={{
-            paddingLeft: '0',
-            paddingRight: '0',
-            }}
+          maxWidth={false}
+          style={{
+            paddingLeft: "0",
+            paddingRight: "0",
+          }}
         >
-            <Box
+          <Box
             display="flex"
             justifyContent="center"
-            alignItems={{ xs: 'center', md: 'stretch' }}
+            alignItems={{ xs: "center", md: "stretch" }}
             sx={{
-                gap: '4rem',
-                flexDirection: { xs: 'column', md: 'row' },
+              gap: "4rem",
+              flexDirection: { xs: "column", md: "row" },
             }}
-            >
+          >
             <Box
-                sx={{
-                width: { xs: '90%', md: '35%' },
-                minWidth: '330px',
-                backgroundColor: '#d8c3a5',
-                padding: '1.5rem',
-                borderRadius: '8px',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                textAlign: 'left',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                }}
+              sx={{
+                width: { xs: "90%", md: "35%" },
+                minWidth: "330px",
+                backgroundColor: "#d8c3a5",
+                padding: "1.5rem",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                textAlign: "left",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
             >
-                <Typography
-                    sx={{
-                        fontSize: '1.2rem',
-                        fontFamily: 'Poppins, sans-serif',
-                        color: '#6e6658',
-                    }}
-                >
-                    Full Name: Evangelos Argyropoulos
-                </Typography>
-                <Typography
-                    sx={{
-                        fontSize: '1.2rem',
-                        fontFamily: 'Poppins, sans-serif',
-                        color: '#6e6658',
-                    }}
-                >
-                    Location: Athens, Greece
-                </Typography>
-                <Typography
+              <Typography
                 sx={{
-                    fontSize: '1.2rem',
-                    fontFamily: 'Poppins, sans-serif',
-                    color: '#6e6658',
+                  fontSize: "1.2rem",
+                  fontFamily: "Poppins, sans-serif",
+                  color: "#6e6658",
                 }}
-                >
-                    Email: vag.argyropoulos@gmail.com
-                </Typography>
+              >
+                Full Name: Evangelos Argyropoulos
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "1.2rem",
+                  fontFamily: "Poppins, sans-serif",
+                  color: "#6e6658",
+                }}
+              >
+                Location: Athens, Greece
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "1.2rem",
+                  fontFamily: "Poppins, sans-serif",
+                  color: "#6e6658",
+                }}
+              >
+                Email: vag.argyropoulos@gmail.com
+              </Typography>
             </Box>
 
             <Box
-                sx={{
-                width: { xs: '90%', md: '55%' },
-                minWidth: '330px',
-                backgroundColor: '#d8c3a5',
-                padding: '2rem',
-                borderRadius: '8px',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                textAlign: 'left',
-                }}
+              sx={{
+                width: { xs: "90%", md: "55%" },
+                minWidth: "330px",
+                backgroundColor: "#d8c3a5",
+                padding: "2rem",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                textAlign: "left",
+              }}
             >
-                <Typography
-                    component="h1"
-                    gutterBottom
-                    sx={{
-                        color: '#6e6658',
-                        fontSize: '2.5rem',
-                        fontFamily: 'Poppins, sans-serif',
-                    }}
-                    >
-                        About Me
-                </Typography>
-                <Typography
-                    paragraph
-                    sx={{
-                        color: '#6e6658',
-                        fontFamily: 'Poppins, sans-serif',
-                    }}
-                    >
-                        Hello, I'm Vaggelis, and this is my personal website.
-                        I was born in Athens in January 2004.
-                        After finishing school in 2022, I took the Panhellenic Exams to pursue a degree in Computer Science at the University of Athens.
-                </Typography>
-                <Typography
-                    paragraph
-                    sx={{
-                        color: '#6e6658',
-                        fontFamily: 'Poppins, sans-serif',
-                    }}
-                    >
-                        I'm a computer scientist interested in how technology connects with business and influences everyday life through practical solutions.
-                </Typography>
+              <Typography
+                component="h1"
+                gutterBottom
+                sx={{
+                  color: "#6e6658",
+                  fontSize: "2.5rem",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                About Me
+              </Typography>
+              <Typography
+                paragraph
+                sx={{
+                  color: "#6e6658",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Hello, I'm Vaggelis, and this is my personal website. I was born
+                in Athens in January 2004. After finishing school in 2022, I
+                took the Panhellenic Exams to pursue a degree in Computer
+                Science at the University of Athens.
+              </Typography>
+              <Typography
+                paragraph
+                sx={{
+                  color: "#6e6658",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                I’m a computer scientist interested in machine learning,
+                intelligent systems, and building software for research
+                and enterprise applications.
+              </Typography>
             </Box>
-            </Box>
+          </Box>
         </Container>
-        </section>
+      </section>
     );
 };
 
