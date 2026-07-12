@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..b0a81fb 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -651,6 +651,8 @@ module.exports = function (webpackEnv) {
+       // during a production build.
+       // Otherwise React will be compiled in the very slow development mode.
+       new webpack.DefinePlugin(env.stringified),
++      // Apply HMR at compiler-creation time; WDS's late apply() is ineffective with this webpack version.
++      isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),
+       // Experimental hot reloading for React .
+       // https://github.com/facebook/react/tree/main/packages/react-refresh
+       isEnvDevelopment &&

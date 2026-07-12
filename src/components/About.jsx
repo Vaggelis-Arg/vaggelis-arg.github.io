@@ -107,7 +107,8 @@ const About = () => {
                 Hello, I'm Vaggelis, and this is my personal website. I was born
                 in Athens in January 2004. After finishing school in 2022, I
                 took the Panhellenic Exams to pursue a degree in Computer
-                Science at the University of Athens.
+                Science at the University of Athens, from which I graduated in
+                2026.
               </Typography>
               <Typography
                 paragraph

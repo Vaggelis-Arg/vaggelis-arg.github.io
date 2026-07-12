@@ -141,8 +141,66 @@ const Portfolio = () => {
                   generate phishing emails. A generator creates emails, a
                   discriminator distinguishes these emails as real or fake
                   phishing, and a classifier labels them as safe or phishing.
-				  The goal is for the generator to produce phishing emails
-				  that fool both the discriminator and the classifier.
+                  The goal is for the generator to produce phishing emails
+                  that fool both the discriminator and the classifier.
+                </Typography>
+              </CardContent>
+            </a>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Card
+            sx={{
+              backgroundColor: "#d8c3a5",
+              color: "#6e6658",
+              boxShadow: 8,
+              p: 1.5,
+              textAlign: "center",
+              borderRadius: 0,
+              height: "100%",
+              "&:hover": {
+                transform: "scale(1.01)",
+                transition: "transform 0.3s",
+              },
+            }}
+          >
+            <a
+              href="https://github.com/Vaggelis-Arg/Decomposed-Weight-Learning"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontFamily: "monospace",
+                    fontWeight: 700,
+                    color: "#4a4a44",
+                    whiteSpace: "normal",
+                    wordBreak: "break-word",
+                  }}
+                >
+                  Spectral Compression for Scalable Weight Space
+                  Learning
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#6e6658",
+                    fontFamily: "Poppins, sans-serif",
+                    mt: 1.5,
+                    textAlign: "left",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  Weight space learning studies tasks that operate directly on
+                  the weight parameters of trained neural networks, without
+                  running them on any data. In this thesis, I spectrally
+                  compress the network weights and take this compressed form as
+                  the input representation instead of the raw weights.
+                  Experiments confirm that it preserves sufficient signal for
+                  downstream tasks in most cases.
                 </Typography>
               </CardContent>
             </a>

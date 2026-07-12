@@ -211,7 +211,7 @@ const Resume = () => {
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
           }}
           contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
-          date="2022 - Present"
+          date="2022 -2026"
           iconStyle={{
             background: "#d8c3a5",
             color: "#6e6658",
@@ -245,7 +245,7 @@ const Resume = () => {
             Department of Informatics, University Of Athens
           </Typography>
           <Typography variant="body1">
-            Current Grade: 9.08/10 (highest honors). <br />4 year program - 240
+            Grade: 9.15/10 (highest honors). <br />4 year program - 240
             ECTS.
           </Typography>
         </VerticalTimelineElement>

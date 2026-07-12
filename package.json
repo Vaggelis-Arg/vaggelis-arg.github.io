@@ -25,6 +25,7 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
+        "postinstall": "patch-package",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -51,6 +52,10 @@
         ]
     },
     "devDependencies": {
-        "gh-pages": "^6.1.1"
+        "gh-pages": "^6.1.1",
+        "patch-package": "^8.0.1"
+    },
+    "overrides": {
+        "webpack": "5.89.0"
     }
 }

@@ -76,7 +76,7 @@ const Home = () => {
                                     '100%': { opacity: 1, transform: 'translateY(0)' },
                                 },
                             }}>
-                                I'm a fourth-year undergraduate student in the Department of Informatics and Telecommunications at the University of Athens.
+                                I'm a computer science engineer working on efficient machine learning systems.
                             </Typography>
 
                             <Box 
