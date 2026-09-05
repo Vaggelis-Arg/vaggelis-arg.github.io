@@ -7,11 +7,13 @@ import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import { Typography, useMediaQuery } from "@mui/material";
 import nkuaLogo from "../assets/nkua-logo.png";
 import othisiLogo from "../assets/othisi-school.png";
 import sapienzaLogo from "../assets/sapienza-university-of-rome-logo.png";
 import odysseyLogo from "../assets/odyssey-logo.png";
+import hellenicArmyLogo from "../assets/hellenic-army-logo.png";
 
 const Resume = () => {
   const isSmallScreen = useMediaQuery("(max-width:550px)");
@@ -43,6 +45,53 @@ const Resume = () => {
       </Typography>
 
       <VerticalTimeline lineColor="#6e6658">
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            borderRadius: "15px",
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+          }}
+          contentArrowStyle={{ borderRight: "7px solid  #d8c3a5" }}
+          date="Jun 2026 - Present"
+          iconStyle={{
+            background: "#d8c3a5",
+            color: "#6e6658",
+            boxShadow: "0 0 0 3px #6e6658",
+          }}
+          icon={<PendingActionsIcon />}
+        >
+          <Typography
+            variant={isSmallScreen ? "h6" : "h5"}
+            component="h3"
+            sx={{ fontWeight: "bold", fontFamily: "Merriweather, serif" }}
+          >
+            Military Service
+          </Typography>
+          <img
+            src={hellenicArmyLogo}
+            alt="Greek Army"
+            style={{
+              marginTop: "1rem",
+              float: "left",
+              height: isSmallScreen ? "85px" : "115px",
+              marginBottom: "0.3rem",
+            }}
+          />
+          <Typography
+            variant="subtitle1"
+            component="h4"
+            color="textSecondary"
+            style={{ clear: "both", marginTop: "0.5rem" }}
+          >
+            Greek Army
+          </Typography>
+          <Typography variant="body1">
+            Compulsory service required of all Greek male citizens.
+          </Typography>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           contentStyle={{
